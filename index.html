@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Bookmark landing page</title>
+  </head>
+
+  <body class="font-body box-border">
+    <!--haeder and nav start-->
+    <header class="flex items-center justify-between p-8 lg:px-24">
+      <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path
+            d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+            fill="#242A45"
+            fill-rule="nonzero"
+          />
+          <g>
+            <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+            <path
+              d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+              fill="#FFF"
+            />
+          </g>
+        </g>
+      </svg>
+
+      <nav
+        class="gap-8 items-center hidden uppercase max-md:justify-between md:flex max-md:flex-col fixed md:relative max-md:bg-veryDarkBlue/90 inset-0 md:flex-row z-20 max-md:p-8 transition-all duration-500 ease-in-out"
+        aria-expanded="false"
+        id="mobileNav"
+      >
+        <section class="w-full">
+          <div class="flex items-center justify-between md:hidden">
+            <img src="./images/logo-bookmark-light.svg" alt="website logo" />
+            <button
+              class="border-none bg-transparent"
+              id="closeNav"
+              aria-label="close button"
+            >
+              <img src="./images/icon-close.svg" alt="close button icon" />
+            </button>
+          </div>
+
+          <ul
+            class="flex items-center text-center max-md:mt-8 max-md:flex-col w-full md:gap-8"
+          >
+            <li class="border-t border-white max-md:py-4 w-full">
+              <a
+                href="#"
+                class="cursor-pointer font-normal text-lg md:text-md text-white md:text-veryDarkBlue hover:text-softRed"
+                >Features</a
+              >
+            </li>
+            <li class="border-t border-white max-md:py-4 w-full">
+              <a
+                href="#"
+                class="cursor-pointer font-normal text-lg md:text-md text-white md:text-veryDarkBlue hover:text-softRed"
+                >Pricing</a
+              >
+            </li>
+            <li class="border-t border-white max-md:py-4 w-full">
+              <a
+                href="#"
+                class="cursor-pointer font-normal text-lg md:text-md text-white md:text-veryDarkBlue hover:text-softRed"
+                >Contact</a
+              >
+            </li>
+            <li class="border-t border-white max-md:py-4 w-full">
+              <button
+                class="border-2 border-white md:bg-softRed uppercase text-white font-medium px-4 py-2 text-lg md:text-sm md:rounded-md md:border-2 border-transparent md:hover:bg-white md:hover:border-softRed md:hover:text-softRed max-md:w-full"
+                aria-label="login button"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <div class="md:hidden flex items-center gap-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" >
+            <path fill="#FFF" fill-rule="evenodd" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20 " >
+            <path fill="#FFF" fill-rule="evenodd" d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"/>
+          </svg>
+        </div>
+      </nav>
+
+      <button
+        class="border-none bg-transparent flex items-center md:hidden cursor-pointer"
+        id="openNav"
+        aria-label="open navbar button"
+      >
+        <img src="./images/icon-hamburger.svg" alt="nav open button" />
+      </button>
+    </header>
+    <!--haeder and nav end-->
+
+    <main>
+      <!-- simple bookmark manager area start  (section 1)-->
+      <section class="p-8 lg:px-24 md:flex gap-16 max-w-8xl mx-auto">
+        <div class="mb-8 relative order-2 max-w-full h-auto">
+          <img
+            src="./images/illustration-hero.svg"
+            alt="hero image"
+            class="w-full h-auto block"
+            width="650px"
+            height="450px"
+          />
+          <div
+            class="absolute bg-softBlue bottom-0 right-[-12%] lg:right-[-20%] w-full h-3/4 z-[-1] rounded-l-full"
+          ></div>
+        </div>
+        <div class="order-1 max-w-md mx-auto">
+          <h1
+            class="text-3xl text-center text-veryDarkBlue font-medium pt-12 md:text-4xl md:text-left"
+          >
+            A Simple Bookmark Manager
+          </h1>
+          <p class="text-center pt-5 pb-8 text-grayishBlue md:text-left">
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="flex gap-4 sm:justify-center md:justify-start">
+            <button
+              class="bg-softBlue text-white w-full md:w-auto p-4 h-14 rounded-lg border-2 border-transparent text-sm hover:bg-white shadow-md hover:border-softBlue hover:text-softBlue"
+              aria-label="get it on chrome"
+            >
+              Get it on Chrome
+            </button>
+            <button
+              class="bg-grayishBlue/10 w-full md:w-auto h-14 text-veryDarkBlue/70 font-medium p-4 text-sm rounded-lg border-2 border-transparent shadow-md hover:bg-white hover:border-veryDarkBlue hover:text-veryDarkBlue"
+              aria-label="get it on firefox"
+            >
+              Get it on Firefox
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- simple bookmark manager area end  (section 1)-->
+
+      <!--  Feature area start  (section 2)-->
+      <section class="my-20 px-8 lg:px-24 max-w-8xl mx-auto">
+        <h1 class="text-3xl text-center text-veryDarkBlue font-medium pb-4">
+          Features
+        </h1>
+        <p
+          class="text-center text-sm text-grayishBlue md:max-w-[500px] mx-auto"
+        >
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+        <ul
+          class="md:flex mx-auto justify-evenly my-8 md:border-b-2 border-grayishBlue md:max-w-[700px]"
+        >
+          <li
+            class="text-center text-grayishBlue list-none font-medium cursor-pointer hover:text-softRed max-md:border-y border-grayishBlue/50"
+          >
+            <button
+              class="py-5"
+              data-target="content1"
+              aria-selected="false"
+            >
+              Simple Bookmarking
+            </button>
+          </li>
+          <li
+            class="text-center text-grayishBlue list-none font-medium cursor-pointer hover:text-softRed"
+          >
+            <button
+              class="py-5"
+              data-target="content2"
+              aria-selected="false"
+            >
+              Speedy Searching
+            </button>
+          </li>
+          <li
+            class="text-center text-grayishBlue list-none font-medium cursor-pointer hover:text-softRed max-md:border-y border-grayishBlue/50"
+          >
+            <button
+              class="py-5"
+              data-target="content3"
+              aria-selected="false"
+            >
+              Easy Sharing
+            </button>
+          </li>
+        </ul>
+        <section class="tabs-content ">
+          <section id="content1" class="tab-content active ">
+            <section class="md:flex md:my-8 gap-24">
+              <div class="mb-8 relative order-1 pb-8 max-w-full h-auto">
+                <img
+                  src="./images/illustration-features-tab-1.svg"
+                  alt="hero image"
+                  class="w-full h-auto block"
+                />
+                <div
+                  class="absolute bg-softBlue bottom-0 left-[-18%] lg:left-[-30%] w-full h-3/4 z-[-1] rounded-r-full"
+                ></div>
+              </div>
+
+              <div class="order-2 max-w-md max-md:mx-auto md:my-auto">
+                <h1
+                  class="text-2xl text-center text-veryDarkBlue font-medium md:text-3xl md:text-left"
+                >
+                  Bookmark in one click
+                </h1>
+                <p
+                  class="text-center pt-5 pb-8 text-grayishBlue md:text-left font-normal"
+                >
+                  Organize your bookmarks however you like. Our simple
+                  drag-and-drop interface gives you complete control over how
+                  you manage your favourite sites.
+                </p>
+                <button
+                  class="bg-softBlue text-white w-full md:w-auto p-4 h-14 rounded-lg border-2 border-transparent text-sm hover:bg-white shadow-md hover:border-softBlue hover:text-softBlue"
+                  aria-label="more info"
+                >
+                  More Info
+                </button>
+              </div>
+            </section>
+          </section>
+
+          <!--2-->
+          <section id="content2" class="tab-content">
+            <section class="md:flex md:my-8 gap-24">
+              <div class="mb-8 relative order-1 pb-8 max-w-full h-auto">
+                <img
+                  src="images/illustration-features-tab-2.svg"
+                  alt="image about Intelligent search "
+                  class="w-full h-auto block"
+                />
+                <div
+                  class="absolute bg-softBlue bottom-0 left-[-18%] lg:left-[-36%] w-full h-3/4 z-[-1] rounded-r-full"
+                ></div>
+              </div>
+
+              <div class="order-2 max-w-md max-md:mx-auto md:my-auto">
+                <h1
+                  class="text-2xl text-center text-veryDarkBlue font-medium md:text-3xl md:text-left"
+                >
+                  Intelligent search
+                </h1>
+                <p
+                  class="text-center pt-5 pb-8 text-grayishBlue md:text-left font-normal"
+                >
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of your
+                  bookmarks.
+                </p>
+                <button
+                  class="bg-softBlue text-white w-full md:w-auto p-4 h-14 rounded-lg border-2 border-transparent text-sm hover:bg-white shadow-md hover:border-softBlue hover:text-softBlue"
+                  aria-label="more info"
+                >
+                  More Info
+                </button>
+              </div>
+            </section>
+          </section>
+
+          <!--3-->
+          <section id="content3" class="tab-content">
+            <section class="md:flex md:my-8 gap-24">
+              <div class="mb-8 relative order-1 pb-8 max-w-full h-auto">
+                <img
+                  src="./images/illustration-features-tab-3.svg"
+                  alt=" feature tab 3 image"
+                  class="w-full h-auto block"
+                />
+                <div
+                  class="absolute bg-softBlue bottom-0 left-[-18%] lg:left-[-42%]  w-full h-3/4 z-[-1] rounded-r-full"
+                ></div>
+              </div>
+
+              <div class="order-2 max-w-md max-md:mx-auto md:my-auto">
+                <h1
+                  class="text-2xl text-center text-veryDarkBlue font-medium md:text-3xl md:text-left"
+                >
+                  Share your bookmarks
+                </h1>
+                <p
+                  class="text-center pt-5 pb-8 text-grayishBlue md:text-left font-normal"
+                >
+                  Easily share your bookmarks and collections with others.
+                  Create a shareable link that you can send at the click of a
+                  button.
+                </p>
+                <button
+                  class="bg-softBlue text-white w-full md:w-auto p-4 h-14 rounded-lg border-2 border-transparent text-sm hover:bg-white shadow-md hover:border-softBlue hover:text-softBlue"
+                  aria-label="more info"
+                >
+                  More Info
+                </button>
+              </div>
+            </section>
+          </section>
+        </section>
+      </section>
+      <!--  Feature area end  (section 2)-->
+
+      <!--  Download extension area start  (section 3)-->
+      <section class="px-8 lg:px-24 max-w-8xl mx-auto">
+        <h1 class="text-2xl text-center text-veryDarkBlue font-medium pb-4">
+          Download the extension
+        </h1>
+        <p
+          class="text-center text-sm text-grayishBlue md:max-w-[500px] mx-auto"
+        >
+          We’ve got more browsers in the pipeline. Please do let us know if
+          you’ve got a favourite you’d like us to prioritize
+        </p>
+        <section
+          class="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] mt-10 mb-20 max-w-6xl mx-auto gap-3 relative"
+        >
+          <article
+            class="max-w-[280px] mx-auto h-auto shadow-lg rounded-lg bg-white p-4 flex flex-col items-center my-8 cursor-pointer transition ease-in-out delay-150 hover:scale-105 "
+          >
+            <img
+              class="py-8"
+              src="./images/logo-chrome.svg"
+              alt="google chrome logo"
+              width="102px"
+              height="auto"
+            />
+            <h1 class="text-veryDarkBlue text-lg font-medium pb-2">
+              Add to Chrome
+            </h1>
+            <span class="text-grayishBlue text-sm font-medium pb-4">
+              Minimum version 62
+            </span>
+            <img
+              class="pb-4 w-full"
+              src="./images/bg-dots.svg"
+              alt="a line of dots"
+            />
+            <button
+              class="bg-softBlue text-white w-full p-4 h-14 rounded-lg border-2 border-transparent text-sm hover:bg-white shadow-md hover:border-softBlue hover:text-softBlue"
+              aria-label="install the extension on chrome"
+            >
+              Add & Install Extension
+            </button>
+          </article>
+
+          <article
+            class="max-w-[280px] mx-auto h-auto shadow-lg rounded-lg bg-white p-4 flex flex-col items-center my-8 lg:transform lg:translate-y-10  cursor-pointer transition ease-in-out delay-150 hover:scale-105"
+          >
+            <img
+              class="py-8"
+              src="./images/logo-firefox.svg"
+              alt="google chrome logo"
+              width="102px"
+              height="auto"
+            />
+            <h1 class="text-veryDarkBlue text-lg font-medium pb-2">
+              Add to Firefox
+            </h1>
+            <span class="text-grayishBlue text-sm font-medium pb-4">
+              Minimum version 55
+            </span>
+            <img
+              class="pb-4 w-full"
+              src="./images/bg-dots.svg"
+              alt="a line of dots"
+            />
+            <button
+              class="bg-softBlue text-white w-full p-4 h-14 rounded-lg border-2 border-transparent text-sm hover:bg-white shadow-md hover:border-softBlue hover:text-softBlue "
+              aria-label="install the extension on chrome"
+            >
+              Add & Install Extension
+            </button>
+          </article>
+
+          <article
+            class="max-w-[280px] mx-auto h-auto shadow-lg rounded-lg bg-white p-4 flex flex-col items-center my-8 lg:transform lg:translate-y-20 cursor-pointer transition ease-in-out delay-150 hover:scale-105"
+          >
+            <img
+              class="py-8"
+              src="./images/logo-opera.svg"
+              alt="google chrome logo"
+              width="102px"
+              height="auto"
+            />
+            <h1 class="text-veryDarkBlue text-lg font-medium pb-2">
+              Add to Opera
+            </h1>
+            <span class="text-grayishBlue text-sm font-medium pb-4">
+              Minimum version 46
+            </span>
+            <img
+              class="pb-4 w-full"
+              src="./images/bg-dots.svg"
+              alt="a line of dots"
+            />
+            <button
+              class="bg-softBlue text-white w-full p-4 h-14 rounded-lg border-2 border-transparent text-sm hover:bg-white shadow-md hover:border-softBlue hover:text-softBlue"
+              aria-label="install the extension on chrome"
+            >
+              Add & Install Extension
+            </button>
+          </article>
+        </section>
+      </section>
+      <!--  Download extension area end  (section 3)-->
+
+      <!--  faq area  start  (section 4)-->
+      <section class="max-w-2xl px-8 pt-8 lg:px-24 mx-auto">
+        <h1 class="text-2xl text-center text-veryDarkBlue font-medium pb-4">
+          Frequently Asked Questions
+        </h1>
+        <p class="text-center text-sm text-grayishBlue mx-auto">
+          Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.
+        </p>
+        <article class="my-8 ">
+          <details class="cursor-pointer FAQ">
+            <summary
+              class="list-none flex justify-between items-center py-4 border-y border-grayishBlue/50 font-normal text-veryDarkBlue hover:text-softRed"
+            >
+              What is Bookmark? 
+              <img src="./images/icon-arrow.svg" alt="" class="transition ease-in-out delay-300 dropdown">
+            </summary>
+            <p class="py-4 text-sm text-grayishBlue font-medium leading-loose">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+              quis quam ornare mattis.Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Fusce tincidunt justo eget ultricies fringilla.
+              Phasellus blandit ipsum quis quam ornare mattis.
+            </p>
+          </details>
+          <details class="cursor-pointer FAQ">
+            <summary
+              class="list-none flex justify-between items-center py-4 border-y border-grayishBlue/50 font-normal text-veryDarkBlue hover:text-softRed"
+            >
+              How can I request a new browser?
+              <img src="./images/icon-arrow.svg" alt="" class="transition ease-in-out delay-300 dropdown">
+            </summary>
+            <p class="py-4 text-sm text-grayishBlue font-medium leading-loose">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet.
+            </p>
+          </details>
+          <details class="cursor-pointer FAQ">
+            <summary
+              class="list-none flex justify-between items-center py-4 border-y border-grayishBlue/50 font-normal text-veryDarkBlue hover:text-softRed"
+            >
+              Is there a mobile app?
+              <img src="./images/icon-arrow.svg" alt="" class="transition ease-in-out delay-300 dropdown">
+            </summary>
+            <p class="py-4 text-sm text-grayishBlue font-medium leading-loose">
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+              vestibulum dolor, ut condimentum urna vulputate eget. Cras in
+              ligula quis est pharetra mattis sit amet pharetra purus. Sed
+              sollicitudin ex et ultricies bibendum.
+            </p>
+          </details>
+          <details class="cursor-pointer FAQ">
+            <summary
+              class="list-none flex justify-between items-center py-4 border-y border-grayishBlue/50 font-normal text-veryDarkBlue hover:text-softRed"
+            >
+              What about other Chromium browsers?
+              <img src="./images/icon-arrow.svg" alt="" class=" dropdown">
+            </summary>
+            <p class="py-4 text-sm text-grayishBlue font-medium leading-loose">
+              Integer condimentum ipsum id imperdiet finibus. Vivamus in
+              placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
+              pellentesque non ut velit.
+            </p>
+          </details>
+        </article>
+        <button
+          class="bg-softBlue text-white flex items-center justify-between mx-auto p-4 h-12 rounded-lg border-2 border-transparent text-sm hover:bg-white shadow-md hover:border-softBlue hover:text-softBlue"
+          aria-label="more info"
+        >
+          More Info
+        </button>
+      </section>
+      <!--  faq area  end  (section 4)-->
+
+      <!--   email area  start  (section 5)-->
+      <section class="bg-softBlue mt-20 p-8">
+        <div class="max-w-md mx-auto text-center">
+          <p class="text-white uppercase text-center tracking-widest text-sm">
+            35,000+ already joined
+          </p>
+          <h1 class="text-white text-xl md:text-3xl py-4">
+            Stay up-to-date with what we’re doing
+          </h1>
+          <form class="flex flex-col  md:flex-row items-center justify-center gap-4  ">
+            <div class="relative  w-full">
+              <input
+                class="bg-white px-2 py-2 w-full rounded-sm text-sm outline-none text-veryDarkBlue   "
+                type="email"
+                placeholder="Enter Your Email address"
+                id="email"
+                
+              />
+              <span >
+                <img src="./images/icon-error.svg" alt="" class="absolute top-[50%] translate-y-[-50%] right-[15px] hidden " id="error-icon">
+              </span>
+            </div>
+            <button
+              class="bg-softRed uppercase text-white w-2/4 font-medium   py-2 text-sm rounded-md border-2 border-transparent hover:bg-white hover:border-softRed hover:text-softRed"
+              aria-label="contact us button"
+              id="submitBtn"
+            >
+              Contact Us
+            </button>
+          </form>
+        </div>
+      </section>
+      <!--   email area  end  (section 5)-->
+      <!--footer  start-->
+      <footer
+        class="bg-veryDarkBlue flex flex-col items-center justify-center md:flex-row md:justify-between p-8 lg:px-24"
+      >
+        <section
+          class="flex flex-col md:flex-row items-center gap-8 md:justify-between"
+        >
+          <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <path
+                d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+                fill="#FFF"
+                fill-rule="nonzero"
+              />
+              <g>
+                <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+                <path
+                  d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+                  fill="#FFF"
+                />
+              </g>
+            </g>
+          </svg>
+          <nav aria-label="footer navigation">
+            <ul class="flex max-md:flex-col gap-8 items-center max-md:my-8">
+              <li
+                class="cursor-pointer uppercase font-normal text-white hover:text-softRed"
+              >
+                Features
+              </li>
+              <li
+                class="cursor-pointer uppercase font-normal text-white hover:text-softRed"
+              >
+                Pricing
+              </li>
+              <li
+                class="cursor-pointer uppercase font-normal text-white hover:text-softRed"
+              >
+                Contact
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <section class="flex gap-4 items-center justify-center cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" >
+            <path fill="#FFF" fill-rule="evenodd" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20 " >
+            <path fill="#FFF" fill-rule="evenodd" d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"/>
+          </svg>
+        </section>
+      </footer>
+      <!--footer  end-->
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
